@@ -1,91 +1,85 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Condenadas Vila de Village</title>
+<title>Pirâmides do Deserto</title>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
-body {
-  margin:0;
-  font-family: 'Press Start 2P', cursive;
-  background: linear-gradient(#87CEEB 0%, #87CEEB 40%, #6ab04c 40%, #6ab04c 100%);
-  color: #fff;
-  text-align: center;
-}.overlay { background: rgba(0,0,0,0.6); min-height: 100vh; padding: 20px; }
-
-h1 { font-size: 18px; margin-bottom: 10px; text-shadow: 3px 3px #000; }
-
-.seed { font-size: 10px; margin-bottom: 20px; opacity: 0.9; }
-
-.buttons { margin-bottom: 20px; }
-
-button.tab { font-family: inherit; background: #8B5A2B; border: 3px solid #3e2d16; color: white; padding: 12px; margin: 5px; cursor: pointer; box-shadow: inset -3px -3px #5a3a1a, inset 3px 3px #c0843d; }
-
-button.tab:hover { transform: translateY(2px); }
-
-.list { display: none; } .list.active { display: block; }
-
-.coord { background: #c2b280; color: black; margin: 10px auto; padding: 12px; width: 320px; display: flex; justify-content: space-between; align-items: center; border: 3px solid #5c4b1c; box-shadow: inset -3px -3px #a8965c, inset 3px 3px #fff3b0; }
-
-.copy { font-family: inherit; background: #4CAF50; border: 3px solid #1b5e20; padding: 6px; cursor: pointer; color: white; box-shadow: inset -2px -2px #2e7d32, inset 2px 2px #81c784; }
-
-.copy:hover { transform: translateY(2px); }
-
-.footer { margin-top: 30px; font-size: 8px; opacity: 0.7; } </style>
-
+body{
+margin:0;
+font-family:'Press Start 2P',cursive;
+background:linear-gradient(#f7d794 0%,#f7d794 40%,#d2b48c 40%,#d2b48c 100%);
+color:white;
+text-align:center;
+}
+.overlay{
+background:rgba(0,0,0,0.6);
+min-height:100vh;
+padding:20px;
+}
+h1{
+font-size:18px;
+text-shadow:3px 3px #000;
+}
+.seed{
+font-size:10px;
+margin-bottom:20px;
+}
+.coord{
+background:#e6c27a;
+color:black;
+margin:10px auto;
+padding:12px;
+width:320px;
+display:flex;
+justify-content:space-between;
+border:3px solid #8b6b2e;
+}
+.copy{
+font-family:inherit;
+background:#c0392b;
+border:none;
+color:white;
+padding:6px;
+cursor:pointer;
+}
+</style>
 </head>
 <body>
-<div class="overlay"><h1>⛏️ Condenadas Vila de Village</h1>
-<div class="seed">Seed do servidor: 2988260544902735615</div><div class="buttons">
-  <button class="tab" onclick="showTab('perto')">🏘️ Vila próximas</button>
-  <button class="tab" onclick="showTab('longe')">🌎 Vila longe</button>
-  <button class="tab" onclick="showTab('piramide')">🏜️ Pirâmide do deserto</button>
-</div><div id="perto" class="list active">
-  <div class="coord"><span>-248, -792</span><button class="copy" onclick="copy('-248, -792')">Copiar</button></div>
-  <div class="coord"><span>200, -920</span><button class="copy" onclick="copy('200, -920')">Copiar</button></div>
-  <div class="coord"><span>904, -296</span><button class="copy" onclick="copy('904, -296')">Copiar</button></div>
-  <div class="coord"><span>728, 184</span><button class="copy" onclick="copy('728, 184')">Copiar</button></div>
-  <div class="coord"><span>-280, 840</span><button class="copy" onclick="copy('-280, 840')">Copiar</button></div>
-</div><div id="longe" class="list">
-  <div class="coord"><span>1304, 152</span><button class="copy" onclick="copy('1304, 152')">Copiar</button></div>
-  <div class="coord"><span>1720, 312</span><button class="copy" onclick="copy('1720, 312')">Copiar</button></div>
-  <div class="coord"><span>776, 872</span><button class="copy" onclick="copy('776, 872')">Copiar</button></div>
-  <div class="coord"><span>776, -1448</span><button class="copy" onclick="copy('776, -1448')">Copiar</button></div>
-  <div class="coord"><span>-456, 1384</span><button class="copy" onclick="copy('-456, 1384')">Copiar</button></div>
-  <div class="coord"><span>1256, 1128</span><button class="copy" onclick="copy('1256, 1128')">Copiar</button></div>
-  <div class="coord"><span>648, 1400</span><button class="copy" onclick="copy('648, 1400')">Copiar</button></div>
-  <div class="coord"><span>-888, 1240</span><button class="copy" onclick="copy('-888, 1240')">Copiar</button></div>
-  <div class="coord"><span>-1368, 1272</span><button class="copy" onclick="copy('-1368, 1272')">Copiar</button></div>
-  <div class="coord"><span>1208, -1416</span><button class="copy" onclick="copy('1208, -1416')">Copiar</button></div>
-</div><div id="piramide" class="list">
-  <div class="coord"><span>-5320, -2824</span><button class="copy" onclick="copy('-5320, -2824')">Copiar</button></div>
-  <div class="coord"><span>-5624, -2376</span><button class="copy" onclick="copy('-5624, -2376')">Copiar</button></div>
-  <div class="coord"><span>-5880, -1992</span><button class="copy" onclick="copy('-5880, -1992')">Copiar</button></div>
-  <div class="coord"><span>-6040, -2824</span><button class="copy" onclick="copy('-6040, -2824')">Copiar</button></div>
-  <div class="coord"><span>-6408, -2328</span><button class="copy" onclick="copy('-6408, -2328')">Copiar</button></div>
-  <div class="coord"><span>-7496, -1880</span><button class="copy" onclick="copy('-7496, -1880')">Copiar</button></div>
-  <div class="coord"><span>-8392, -1960</span><button class="copy" onclick="copy('-8392, -1960')">Copiar</button></div>
-  <div class="coord"><span>-8360, -2728</span><button class="copy" onclick="copy('-8360, -2728')">Copiar</button></div>
-  <div class="coord"><span>-2216, -4776</span><button class="copy" onclick="copy('-2216, -4776')">Copiar</button></div>
-  <div class="coord"><span>-856, -5416</span><button class="copy" onclick="copy('-856, -5416')">Copiar</button></div>
-  <div class="coord"><span>-1368, -5576</span><button class="copy" onclick="copy('-1368, -5576')">Copiar</button></div>
-  <div class="coord"><span>-1816, -5576</span><button class="copy" onclick="copy('-1816, -5576')">Copiar</button></div>
-  <div class="coord"><span>-1800, -6008</span><button class="copy" onclick="copy('-1800, -6008')">Copiar</button></div>
-  <div class="coord"><span>-1160, -6344</span><button class="copy" onclick="copy('-1160, -6344')">Copiar</button></div>
-  <div class="coord"><span>-920, -6536</span><button class="copy" onclick="copy('-920, -6536')">Copiar</button></div>
-  <div class="coord"><span>-1288, -6808</span><button class="copy" onclick="copy('-1288, -6808')">Copiar</button></div>
-  <div class="coord"><span>-1752, -6840</span><button class="copy" onclick="copy('-1752, -6840')">Copiar</button></div>
-  <div class="coord"><span>-1720, -6648</span><button class="copy" onclick="copy('-1720, -6648')">Copiar</button></div>
-  <div class="coord"><span>9992, -15176</span><button class="copy" onclick="copy('9992, -15176')">Copiar</button></div>
-  <div class="coord"><span>9896, -14744</span><button class="copy" onclick="copy('9896, -14744')">Copiar</button></div>
-</div><div class="footer">Clique em copiar e cole no Minecraft</div></div><script>
-function showTab(tab) {
-  document.querySelectorAll('.list').forEach(el => el.classList.remove('active'));
-  document.getElementById(tab).classList.add('active');
-}
+<div class="overlay">
 
-function copy(text) {
-  navigator.clipboard.writeText(text);
+<h1>🏜️ Pirâmide do Deserto</h1>
+<div class="seed">Seed: 2988260544902735615</div>
+
+<div class="coord"><span>-5320, -2824</span><button class="copy" onclick="copy('-5320, -2824')">Copiar</button></div>
+<div class="coord"><span>-5624, -2376</span><button class="copy" onclick="copy('-5624, -2376')">Copiar</button></div>
+<div class="coord"><span>-5880, -1992</span><button class="copy" onclick="copy('-5880, -1992')">Copiar</button></div>
+<div class="coord"><span>-6040, -2824</span><button class="copy" onclick="copy('-6040, -2824')">Copiar</button></div>
+<div class="coord"><span>-6408, -2328</span><button class="copy" onclick="copy('-6408, -2328')">Copiar</button></div>
+<div class="coord"><span>-7496, -1880</span><button class="copy" onclick="copy('-7496, -1880')">Copiar</button></div>
+<div class="coord"><span>-8392, -1960</span><button class="copy" onclick="copy('-8392, -1960')">Copiar</button></div>
+<div class="coord"><span>-8360, -2728</span><button class="copy" onclick="copy('-8360, -2728')">Copiar</button></div>
+<div class="coord"><span>-2216, -4776</span><button class="copy" onclick="copy('-2216, -4776')">Copiar</button></div>
+<div class="coord"><span>-856, -5416</span><button class="copy" onclick="copy('-856, -5416')">Copiar</button></div>
+<div class="coord"><span>-1368, -5576</span><button class="copy" onclick="copy('-1368, -5576')">Copiar</button></div>
+<div class="coord"><span>-1816, -5576</span><button class="copy" onclick="copy('-1816, -5576')">Copiar</button></div>
+<div class="coord"><span>-1800, -6008</span><button class="copy" onclick="copy('-1800, -6008')">Copiar</button></div>
+<div class="coord"><span>-1160, -6344</span><button class="copy" onclick="copy('-1160, -6344')">Copiar</button></div>
+<div class="coord"><span>-920, -6536</span><button class="copy" onclick="copy('-920, -6536')">Copiar</button></div>
+<div class="coord"><span>-1288, -6808</span><button class="copy" onclick="copy('-1288, -6808')">Copiar</button></div>
+<div class="coord"><span>-1752, -6840</span><button class="copy" onclick="copy('-1752, -6840')">Copiar</button></div>
+<div class="coord"><span>-1720, -6648</span><button class="copy" onclick="copy('-1720, -6648')">Copiar</button></div>
+<div class="coord"><span>9992, -15176</span><button class="copy" onclick="copy('9992, -15176')">Copiar</button></div>
+<div class="coord"><span>9896, -14744</span><button class="copy" onclick="copy('9896, -14744')">Copiar</button></div>
+
+</div>
+
+<script>
+function copy(text){
+navigator.clipboard.writeText(text);
 }
-</script></body>
+</script>
+
+</body>
 </html>
